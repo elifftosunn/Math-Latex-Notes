@@ -1,0 +1,247 @@
+\documentclass[12px]{article}
+\usepackage{lipsum}
+\usepackage{setspace} %paragraf araları icin 
+\usepackage[left=4cm, right=2cm, top=2cm, twoside, a4paper]{geometry}
+
+\setlength{\parskip}{12pt}
+\setlength{\parindent}{1cm}
+%\pagestyle{empty} % sayfa numaraları yok
+%\pagestyle{headings} % sayfa numarası ust koseye gelecek
+%\pagestyle{plain} % sayfa numarası alt ortada
+
+\begin{document}
+
+% Kapak Sayfası
+\title{\Huge{\textbf{Title}}}
+\maketitle
+\large{Bugün \today{} ve yine \TeX perliğim üzerimde
+\ldots}
+\thispagestyle{empty}
+
+% i. entry page
+\newpage
+\pagenumbering{roman}
+\begin{center}
+    \Huge{\textbf{GİRİŞ 1}}
+\end{center}
+\newpage
+
+% ii. entry page
+\newpage
+\begin{center}
+    \Huge{\textbf{GİRİŞ 2}}
+\end{center}
+\newpage
+
+% i. contents page 
+\newpage 
+\pagenumbering{roman}
+\begin{center}
+    \huge{\textbf{İÇİNDEKİLER I}}
+\end{center}
+\newpage
+
+% ii. contents page 
+\newpage 
+\begin{center}
+    \huge{\textbf{İÇİNDEKİLER II}}
+\end{center}
+\newpage
+
+
+% 1.page
+\pagenumbering{arabic}
+\onehalfspacing
+\lipsum[1-2]
+\singlespacing
+\lipsum[3]
+
+% 2.page
+\doublespacing
+\lipsum[4-8]
+
+% 3-4.page
+\onehalfspacing
+\lipsum[11-15]
+\end{document}
+
+
+
+% \emph, \textit: italik yazı
+% \textbf: koyu yazı
+% \underline: altı çizili yazı
+% \begin quote: top-bottom paragraf boslugu
+% \usepackage{lipsum}: hazır paragraf
+% \hfill: paragrafın sonuna yaslamak icin kullanılır
+% \- : taşan paragrafı kesme
+% \'{e} : uzerinde ozel harf
+% \^{a} : inceltilmis a
+
+% \begin{itemize}: listeler olusturma
+% \begin{enumerate}: Numaralı listeler olusturma
+% \begin{center}: Yazıyı ortalama
+% \begin{document}: belge bicimli yazma
+
+% \textsc: Baslık seklinde yazı
+% \texttt: Daktilo seklinde yazı
+% \textsf: Kıvrımsız Düz Yazı
+% \textsl: Eğik Font'lu Yazı(sussuz)
+
+% \usepackage{setspace} % paragraf araları icin library
+% \doublespacing: çift satır aralığı
+% \onehalfspacing: 1.5 satır aralığı
+% \singlespacing: tek satır aralığı
+
+% \setlength{\parskip}{1cm}: 0.5-1 cm, 10pt gibi paragraflar arasında bosluk verme
+% \setlength{\parindent}{1cm}: paragraf baslarının nekadar iceriden oldugunu soyluyoruz (hangi paragraftan baslanırsa o paragraftan itibaren uyguluyor)
+% \usepackage[left=2cm, right=2cm, top=3cm]{geometry}: sayfaya sagdan soldan bosluk verme
+% \usepackage[left=4cm, right=2cm, top=2cm,twoside] twoside: arka arkaya çıktı alındığında metin hizalanmasında kullanılır.
+
+% landscape: kagıdı yatay kullanma
+% a4paper, a5paper, a3paper: kagıt boyutu
+% \pagestyle{empty}: sayfa numaraları yok
+% \pagestyle{headings}: sayfa numarası ust kosede
+% \pagestyle{plain}: sayfa numarası alt ortada
+% \thispagestyle{empty}: bulunulan sayfanın sayfa numarası yok
+% ilk sayfada sayfa numarası yok daha sonraki sayfa 1'den baslıyor
+% \newpage: yeni sayfaya gecis yapmak icin kullanılır
+% \pagenumbering{roman}: i, ii, iii giris gibi sayfalarda sayfa numarası olarak yazma
+% \pagenumbering{arabic}: 1,2,3 şeklinde sayfaları numaralandırma
+% \pagenumbering{Alph}: a,b,c seklinde sayfaları numaralandırma (with big letter)
+
+% \huge, \large, \normalsize ,\small: font size
+
+
+\subsection{
+\section{\textit{
+\begin{enumerate}
+\item \textbf{}
+\begin{itemize}
+\[\item \(\)\textbf{}\]
+\end{itemize}
+\end{enumerate}
+}}
+}
+
+\begin{comment}
+\thispagestyle{empty}
+\singlespacing
+\lipsum[3]
+
+\doublespacing
+\lipsum[4-8]\setcounter{page}{1}
+\end{comment}
+
+
+
+
+% 2.LESSON
+
+\documentclass[12pt]{article}
+\usepackage{lipsum}
+
+
+\begin{document}
+\begin{enumerate}
+    \item İlk soruyu buraya yazıyorum. 
+    \begin{enumerate}
+        \item Bu a şıkkı olsun.
+        \item Bu da b şıkkı olsun.
+    \end{enumerate}
+    \item İkinci soru da bunlar olacak. Sorudaki koşullar şunlardır:
+    \begin{itemize}
+        \item Soru anlamlı olacak.
+        \item Öğrenci kolay çözecek.
+    \end{itemize}
+    \item Son soruyu buraya yazıyorum. 
+    \begin{enumerate}
+        \item[\textbf{a)}] Bu a şıkkı olsun.
+        \item[\textbf{b)}] Bu da b şıkkı olsun.
+        \item[\textbf{c)}] Bu da c şıkkı olsun.
+    \end{enumerate}
+\end{enumerate}
+Yeni bir blok oluşturalım.
+\begin{itemize}
+    \item Birinci seçenek
+    \begin{enumerate}
+        \item Enumerate Seçenek 1
+        \item Enumerate Seçenek 2
+    \end{enumerate}
+\end{itemize}
+
+\begin{quote}
+\begin{center}
+    \textsc{Deneme Baslık Yazı}
+    
+    \texttt{Daktilo Seklinde Yazı}
+    
+    \textsf {Kıvrımsız Düz Yazı}
+    
+    \textsl {Eğik Font'lu Yazı}
+    
+    \textbf{Aşağıdaki seçenekler yapılabilir.}
+\end{center}
+\begin{enumerate}
+    \item [\underline{\textbf{Seçenek 1.}}] İlk Seçenek
+    \item [\underline{\textbf{Seçenek 2.}}] İkinci Seçenek
+\end{enumerate}    
+\end{quote}
+
+\end{document}
+
+
+
+
+
+
+Aşağıdaki seçenekler yapılabilir.
+\begin{itemize}
+    \item Bu yapılacaklar arasında ilk seçenektir.
+    \begin{itemize}
+        \item Birinci seçenekte de alt seçenekler var.
+    \end{itemize}
+    \item Bu yapılacaklar arasında ikinci seçenektir.
+    \begin{itemize}
+        \item Birden çok seçenek var. Bu birinci seçenektir.
+        \begin{itemize}
+            \item İkinci seçeneğin alt seçeneğinin alt seçeneği
+        \end{itemize}
+        \item İkinci seçenek bir başka alt seçenekte bulunur.
+    \end{itemize}
+    \item Bu yapılacaklar arasında sonuncu seçenektir.
+\end{itemize}
+
+
+
+
+
+
+
+
+% 1.LESSON
+
+
+\lipsum[1]
+
+\begin{quote} % begin{quote}: top-bottom paragraf boslugu
+%Merhaba Dünya Bu bir giris metnidir.
+
+
+\emph{Küçük prens çölü geçerken bir çiçeğe rastladı \underline{\emph{yalnızca}}. \emph{Üç taç\-yap\-rak\-lı} sıradan bir çiçekti.}
+
+``Günaydın," dedi \underline{Küçük Prens.} 
+
+``Günaydın," dedi çiçek.
+
+``İnsanlar nerede?" diye \textbf{kibarca} \textit{sordu} Küçük \emph{Prens.}
+
+``İnsanlar mı?" diye tekrarladı. ``Galiba altı, yedi \textbf{insan} var. Yıllar önce görmüştüm. Ama kim bilir şimdi neredeler? Rüzg\^{a}rla sürüklenmişlerdir. Kökleri yok. Yaşamları güç oluyor o yüzden."
+
+\hfill --Küçük Prens, Antoine de Saint-Exepu\'{e}ry %paragrafın sonuna yaslamak icin kullanılır.
+\end{quote}
+
+\lipsum[2]
+
+
+
+
