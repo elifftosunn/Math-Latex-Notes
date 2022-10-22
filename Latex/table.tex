@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+\renewcommand{\tablename}{\textbf{Tablo}}
+
+\begin{document}
+\doublespacing
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|p{3cm}|}  % kac c,l,r varsa okadar sutun var 
+        \hline % ust cizgi
+        \rowcolor[rgb]{0.5,0.5,0.5}\multicolumn{3}{|c|}{\textbf{ANA BASLIK}}\\ [2ex] \cline{1-3}
+        \rowcolor[gray]{0.3}\textbf{Baslik 1}   & \textbf{Baslik 2}  & \textbf{ Acıklama} \\ [2ex] \cline{1-3} 
+        \rowcolor[gray]{0.9} \textcolor{dargray}{Hücre134234}        &  Hücre25656        & \dotfill \\ [2ex]
+        \rowcolor[gray]{0.9} \textcolor{dargray}{Hücre354535}        &  Hücre4            & \dotfill \\ [2ex]
+        \rowcolor[gray]{0.9} \textcolor{dargray}{Hücre5}             &  Hücre6767867      & \dotfill \\ [2ex] \cline{1-3}
+    \end{tabular}
+    \caption{Bu tablonun Aciklamasi}
+    \label{firstTable}
+\end{table}
+
+\lipsum[1-4]
+\begin{wraptable}{r}{8cm}
+    \begin{tabular}{|l|l|p{2cm}|}  % kac c,l,r varsa okadar sutun var 
+        \hline % ust cizgi
+        \multicolumn{3}{|c|}{\cellcolor[gray]{0.2}\textbf{\textcolor{white}{ANA BASLIK}}}\\ [2ex] \cline{1-3} % altını cizme
+        \cellcolor[gray]{0.5}{\textbf{\textcolor{white}{Baslik 1}}}   & \cellcolor[gray]{0.5}\textbf{\textcolor{white}{Baslik 2}}  & \cellcolor[gray]{0.5}\textbf{\textcolor{white}{Acıklama}}\\ [2ex] \cline{1-3}  % altını cizme
+         Hücre134234        &  Hücre25656        & \dotfill \\ [2ex]
+         Hücre354535        &  Hücre4            & \dotfill \\ [2ex]
+         Hücre5             &  Hücre6767867      & \dotfill \\ [2ex] \cline{1-3}
+    \end{tabular}
+\end{wraptable}
+
+\colorbox{black}{\textcolor{white}{Tablo \ref{firstTable}}} ve \colorbox{black}{\textcolor{white}{Tablo \ref{secondTable}}} elde edildi. \lipsum[4-5]  
+
+
+\newpage
+\begin{sideways}
+        \begin{tabular}{|l|l|p{3cm}|}  % kac c,l,r varsa okadar sutun var 
+        \hline % ust cizgi
+        \multicolumn{3}{|c|}{\textbf{ANA BASLIK}}\\ [2ex] \cline{1-3} % altını cizme
+        \textbf{Baslik 1}   & \textbf{Baslik 2}  & \textbf{ Acıklama}\\ [2ex] \cline{1-3}  % altını cizme
+         Hücre134234        &  Hücre25656        & \dotfill \\ [2ex]
+         Hücre354535        &  Hücre4            & \dotfill \\ [2ex]
+         Hücre5             &  Hücre6767867      & \dotfill \\ [2ex] \cline{1-3}
+    \end{tabular}
+\end{sideways}
+
+\lipsum[6-7]
+
+\vspace{8cm}
+\begin{rotate}{30}
+        \begin{tabular}{|l|l|p{3cm}|}  % kac c,l,r varsa okadar sutun var 
+        \hline % ust cizgi
+        \multicolumn{3}{|c|}{\textbf{ANA BASLIK}}\\ [2ex] \cline{1-3} % altını cizme
+        \textbf{Baslik 1}   & \textbf{Baslik 2}  & \textbf{ Acıklama}\\ [2ex] \cline{1-3}  % altını cizme
+         Hücre134234        &  Hücre25656        & \dotfill \\ [2ex]
+         Hücre354535        &  Hücre4            & \dotfill \\ [2ex]
+         Hücre5             &  Hücre6767867      & \dotfill \\ [2ex] \cline{1-3}
+    \end{tabular}
+\end{rotate}
+
+
+\end{document}
+
+% r : saga yaslı sutun
+% l : sola yaslı sutun
+% c : ortaya hizalı sutun
+% & : ayrı bir hucre olarak algilama
+% \cline{1-3}: alt cizgi{sutun sayısı kadar}
+% \hline : ust cizgi
+% r|c|l : dusey cizgi
+% \dotfill  : nokta ile hucreyı doldurma
+% p{3cm} : tabloda istenilen uzunluk kadar yer ayırma(Aciklama gibi)
+% [2ex] : satirin altinda space birakma
+% \renewcommand{\tablename}{Tablo}  : \begin{table} da aciklama olarak Table yazdigindan onu otomatik olarak Tablo ile degistirdik
+% \caption : table aciklamasi
+% h veya !h(baskilamak) : Here yani yazılan yere tabloyu koyma eger h olmasa idi bir sonraki sayfaya tabloyu atardi.
+% b : bottom yani sayfanın altına tabloyu koyar
+% p : tabloyu tek basina ayri bir sayfaya at (buyuk tablolarda kullanılır)
+% \vspace{10cm} : istenilen kadar bosluk birakma
+% \usepackage{setspace} => \vspace{8cm} : tablo ustunden bosluk verme
+% \usepackage{xcolor} => \colorbox{black}, \textcolor{white) : yazı color, background color renk verme
+% \usepackage{rotating} => \begin{rotate}{30} : tabloyu istenilen derece dondurme
+% \begin{sideways} : tabloyu yan cevirme
+% \usepackage{wrapfig} => \begin{wraptable}{r}{8cm} : paragraf arasına tablo yerlestirme
+

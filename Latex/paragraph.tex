@@ -1,0 +1,65 @@
+\documentclass[12px]{article}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,twoside,a4paper]{geometry}
+\usepackage{fancyhdr} % section isimlerini cizgi cekip ust saga yazıyor
+\usepackage{indentfirst}
+
+\setlength{\parskip}{0.5cm}  % 0.5-1 cm, 10pt gibi paragraflar arasında bosluk verme
+%\setlength{\parindent}{1cm} % paragraf baslarının nekadar iceriden oldugunu soyluyoruz
+\pagestyle{fancy} % section isimlerini cizgi cekip ust saga yazıyor
+\lfoot{\LaTeX\ ile Metin Yazma} % sol alt kısma ozel olarak Latex yazma
+%\rfoot{\TeX} % sag alt kısma ozel olarak Tex yazma
+\rfoot{MAT218}
+\lhead{\textsf{Elif TOSUN}}
+\chead{\textsf{BEU}}
+\rhead{\textsf{TEZ PROJECT}}
+
+\begin{document}
+\pagenumbering{roman}
+\begin{center}
+    \Huge{\textbf{GİRİŞ}}
+\end{center}
+
+\newpage
+\begin{center}
+    \Huge{\textbf{İÇİNDEKİLER}}
+\end{center}
+
+
+\newpage
+\pagenumbering{arabic} % bu sayfa ve altı icin gecerli
+\onehalfspacing % bu sayfa ve altı icin gecerli
+
+\section*{ÖNSÖZ}
+\begin{plain}
+    \textsf{\lipsum[1-3]}\footnote{Bu bir açıklama notudur\ldots}
+\end{plain}
+
+\section*{AÇIKLAMA}
+\begin{plain}
+    \subsection{İLK AÇIKLAMA}
+    \textsf{\lipsum[4-6]}\footnote{Bu da başka bir açıklama notudur\ldots}
+    \subsection{İKİNCİ AÇIKLAMA}
+    \textsf{\lipsum[7-9]}
+\end{plain}
+
+\section{KONU}
+\begin{plain}
+    \textsf{\lipsum[10-12]}
+    
+    \hfill\textbf{\textsf{Elif TOSUN}}
+\end{plain}
+
+
+\end{document}
+
+
+% \begin{flushright} : yazıları saga yaslama
+% \begin{flushleft} : yazıları sola yaslama
+% \begin{plain} : yazıları iki yana yaslama
+% \footnote : açıklama notu bırakma
+% \ldots : cumle sonunda uc nokta bırakma
+% \hfill : yazıyı yatay olarak en alta atar
+% \vfill : yazıyı düsey olarak en alta atar
