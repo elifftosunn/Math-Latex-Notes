@@ -1,0 +1,76 @@
+\documentclass[12pt]{article} % use the article class
+\usepackage[top=3cm]{geometry}
+\usepackage{setspace} 
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[turkish]{babel}
+\usepackage[utf8]{inputenc} % This package will support Turkish chars
+\usepackage[T1]{fontenc}
+
+
+\begin{document}
+\title{\Huge{\textbf{YAZILIM MÜHENDİSLİĞİ}}}
+
+\maketitle\centering\textbf{\Huge{ÖDEV 1}}
+
+
+\vspace{2cm}
+\header{\large{Elif TOSUN}}
+
+\vspace{0.5cm}
+\header{\normalsize{2103022921}}
+\thispagestyle{empty}
+
+
+\newpage
+\begin{flushleft}
+\section*{Recursive(Özyineleme) Fonksiyon Nedir?}
+\textsf{Özyineleme , bir işlevin kendi kodu içinde kendisini çağırması ve böylece içinde bulunan talimatları tekrar tekrar yürütmesidir. }
+\end{flushleft}
+
+\begin{flushleft}
+\section*{Iteration(Yineleme) Fonksiyon Nedir?}
+\textsf{Yineleme , bir döngünün "for" döngüleri ve "while" döngüleri gibi komut setini tekrar tekrar yürütmesidir.}
+\end{flushleft}
+
+
+\begin{flushleft}
+\section*{Özyineleme Ne Zaman Kullanılır?}
+\textsf{Bazen doğrudan çözülemeyecek kadar karmaşık bir sorunla karşılaşırız. Çoğu durumda, bu tür sorunları daha küçük parçalara ayırmaya çalışırız. Ardından, bu küçük parçaları çözmenin bir yolunu bulabilir ve ardından tüm soruna bir çözüm oluşturabiliriz. Özyinelemenin arkasındaki tüm fikir budur.}
+\end{flushleft}
+
+\begin{flushleft}
+\section*{Yineleme Ne Zaman Kullanılır?}
+\textsf{Yineleme, döngüyü kontrol eden koşul yanlış olana kadar bir dizi talimatı tekrar tekrar yürüttüğümüz zamandır. Başlatma, karşılaştırma, yineleme içindeki ifadeleri yürütme ve kontrol değişkenini güncellemeyi içerir.}
+\end{flushleft}
+
+\begin{flushleft}
+\section*{Özyineleme ve Yineleme Arasındaki Temel Farklılıklar}
+\textsf{Özyineleme ve yineleme, bir dizi talimatı tekrar tekrar yürütmenin farklı yollarıdır. Bu ikisi arasındaki temel fark, özyinelemede, ifadeleri işlev gövdesi içinde tekrar tekrar yürütmek için işlev çağrılarını kullanmamız, yinelemede ise aynısını yapmak için "for" ve "while" gibi döngüler kullanmamızdır.
+
+Yineleme, özyinelemeye göre daha hızlı ve alan açısından daha verimlidir. Öyleyse neden özyinelemeye ihtiyacımız var? Nedeni basit - belirli bir problem için özyinelemeli bir yaklaşım kodlamak daha kolaydır.}
+\end{flushleft}
+
+
+\newpage
+\begin{figure}
+\shorthandoff{=}
+    \centering
+    \includegraphics[width=15cm,height=18cm]{img/oneIterationRecursive.PNG}
+    \caption{Bir dizeyi tersten yazdıran programı recursive ve iterative olarak yazma}
+    \label{fig:Reverse}    
+
+\end{figure}
+
+\newpage
+\begin{figure}
+\shorthandoff{=}
+    \centering
+    \includegraphics[width=15cm,height=18cm]{img/twoIterationRecursive.PNG}
+    \caption{Bir listenin artan olup olmadığını belirleyen programı recursive ve iterative olarak yazma}
+    \label{fig:Ascending}    
+
+\end{figure}
+
+
+\end{document}
